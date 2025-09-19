@@ -5,7 +5,6 @@
 
 @font-face {
     font-family: 'Agustina';
-    src: url('/assets/fonts/Agustina.woff') format('woff');
 }
 
 @font-face {
@@ -20,7 +19,7 @@
     --primary-color: #415de6;
     --secondary-color: #e64157;
     --tertiary-color: #12c2e9;
-    --primary-gradient-color: linear-gradient(90deg,#e64157,#415de6);
+    --primary-gradient-color: linear-gradient(90deg,#e641578f,#415de678);
     --secondary-gradient-color: linear-gradient(to right, #12c2e9, #f64f59, #f64f59);
     --underline-gradient: linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
     --vertical-gradient: linear-gradient(to top, #12c2e9, #c471ed, #f64f59);
@@ -28,8 +27,8 @@
 }   
 
 body{
-    font-family: var(--font-family);
-    font-weight: 300;
+font-family: 'Courier New', monospace;
+font-weight: 300;
 }
 
 a{
@@ -55,7 +54,7 @@ a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000 url(/assets/images/dark-bg.webp) 50% no-repeat;
+    background: #000 url(/assets/images/darkmode.jpg) 50% no-repeat;
     background-size: cover;
     filter: brightness(50%);
     -webkit-filter: brightness(50%);
@@ -86,7 +85,7 @@ a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff url(/assets/images/light-bg.webp) 50% no-repeat;
+    background: #fff url(/assets/images/lightmode.jpg) 50% no-repeat;
     background-size: cover;
     filter: brightness(90%);
     -webkit-filter: brightness(90%);
@@ -132,8 +131,9 @@ a:hover{
 }
 
 .logo-name{
-    font-family: 'Agustina', 'Rubik', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Courier New', monospace;
+    font-weight: 300;
+    font-size: 1.7rem;
 }
 
 .primary-bg-btn{
@@ -412,10 +412,11 @@ a:hover{
     top: 0;
     bottom: 0;
     width: 45vw;
-    background-size: contain;
+      border-radius: 10%;
+    background-size: 50%;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-image: url(/assets/images/portrait.webp);
+    background-image: url(/assets/images/profile.jpg);
 }
 
 @media (max-width: 576px) {
@@ -549,8 +550,8 @@ a:hover{
     width: 300px;
     position: absolute;
     z-index: -2;
-    box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
-    -webkit-box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
+    box-shadow: 2px 2px 0px inset #505050, -2px -2px 0px inset transparent;
+    -webkit-box-shadow: 2px 2px 0px inset #505050, -2px -2px 0px inset transparent;
     transition-duration: .5s;
     -webkit-transition-duration: .5s;
 }
@@ -568,12 +569,11 @@ a:hover{
     width: 300px;
     position: absolute;
     z-index: -2;
-    box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
-    -webkit-box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
+    box-shadow: 10px 2px 0px inset transparent, -2px -2px 0px inset #505050;
+    -webkit-box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset #505050;
     transition-duration: .5s;
     -webkit-transition-duration: .5s;
 }
-
 .about-portrait:hover::after {
     transform: translate(35px,30px);
     transition-duration: .5s;
@@ -585,8 +585,8 @@ a:hover{
     height: auto;
     border-radius: 0.5rem;
     object-fit: cover;
-    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd5;
-    -webkit-box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd5;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd535;
+    -webkit-box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #776b6f5d;
 }
 
 #about .bio{
@@ -805,93 +805,67 @@ a:hover{
     border: 1px solid var(--bg-color);
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
 
-#testimonials {
-    padding: 100px 0px;
-    min-height: 100vh;
-    background-image: url(/assets/images/grid.png);
-    background-size: contain;
+/* Accolades Section */
+#accolades {
+    text-align: center;
 }
 
-.testimonial{
-    margin: 0 15px;
+.accolade-category {
+    margin-top: 50px;
 }
 
-.testimonial .description{
-    position: relative;
-    font-size: 13px;
-    line-height: 26px;
-    padding: 30px 20px;
-    border: 1px solid rgba(144, 81, 227, .5);
-    border-left: 3px solid rgba(144, 81, 227, .8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+.accolade-category h3 {
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
-/* Notch Icon for Testimonial Div */
-.testimonial .description:after{
-    position: absolute;
-    bottom: -11px;
-    left: 65px;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: rgba(144, 81, 227, .8);
-    border-bottom: 1px solid rgba(144, 81, 227, .5);
-    border-left: 1px solid rgba(144, 81, 227, .5);
-    transform: skewY(-45deg);
-    -webkit-transform: skewY(-45deg);  
-}
-
-.testimonial .pic{
-    display: inline-block;
-    overflow: hidden;
-    width: 80px;
-    height: 80px;
-    margin: 20px 30px 10px;
-    border: solid 3px transparent;
-    border-radius: 50%;
-    background-image: var(--primary-gradient-color), radial-gradient(circle at top left, var(--primary-color),var(--secondary-color));;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
-
-.testimonial .pic img{
-    width: 100%;
-    height: auto;
-}
-
-.testimonial .detail{
-    margin: 0 30px;
-}
-
-.testimonial .detail .name{
-    color: var(--primary-color);
-    font-size: 17px;
-    font-weight: bold;
-    margin: 0 0 5px 0;
-}
-
-.testimonial .detail .role{
-    font-size: 14px;
-    color: var(--muted-text);
-}
-
-.owl-nav {
+.accolade-list {
     display: flex;
-    position: absolute;
-    top: 70%;
-    transform: translateY(-50%);
-    width: 100%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.owl-prev span,
-.owl-next span {
-    font-size: 25px;
+.accolade-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px var(--shadow-color);
+    text-align: left;
+    flex-basis: 400px;
+    transition: transform 0.3s ease;
+}
+
+.accolade-item:hover {
+    transform: translateY(-5px);
+}
+
+.accolade-item h4 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1.2em;
+}
+
+.accolade-item p {
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.accolade-item a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.accolade-item a:hover {
+    text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
