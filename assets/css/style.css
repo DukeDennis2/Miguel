@@ -66,7 +66,6 @@ a:hover{
 [data-bs-theme="dark"] {
     --text-color: #fff;
     --muted-text: #9a9a9a;
-    --bg-color: #212121;
     --btn-color: #fff;
     --offcanvas-bg: rgba(0,0,0,0.9);
     --offcanvas-border-color: rgba(255, 255, 255, 0.2);
@@ -97,7 +96,6 @@ a:hover{
 [data-bs-theme="light"] {
     --text-color: #000;
     --muted-text: #000;
-    --bg-color: #fff;
     --btn-color: #fff;
     --offcanvas-bg: rgba(215, 215, 215, 0.9);
     --offcanvas-border-color: rgba(255, 255, 255, 0.2);
