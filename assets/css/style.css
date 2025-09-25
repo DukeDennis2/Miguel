@@ -55,7 +55,7 @@ a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000 url("https://ik.imagekit.io/kobe2408/6227297.jpg?updatedAt=1758776347000") 50% no-repeat;
+    background: url("https://ik.imagekit.io/kobe2408/6227297.jpg?updatedAt=1758776347000");
     background-size: cover;
     filter: brightness(50%);
     -webkit-filter: brightness(50%);
@@ -86,7 +86,7 @@ a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff url("https://ik.imagekit.io/kobe2408/3254317.jpg?updatedAt=1758776393427") 50% no-repeat;
+    background: url("https://ik.imagekit.io/kobe2408/3254317.jpg?updatedAt=1758776393427") ;
     background-size: cover;
     filter: brightness(90%);
     -webkit-filter: brightness(90%);
