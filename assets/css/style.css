@@ -359,6 +359,8 @@ a:hover{
     width: 100%;
 }
 
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -405,17 +407,11 @@ a:hover{
     color: var(--muted-text);
 }
 
-.hero-portrait .pic {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 45vw;
-      border-radius: 10%;
-    background-size: 50%;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-image: url(/assets/images/profile.jpg);
+.hero-portrait {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px; /* soft rounded corners */
+  object-fit: cover;   /* keeps it nicely cropped */
 }
 
 @media (max-width: 576px) {
